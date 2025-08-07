@@ -21,7 +21,7 @@ let builds:
     }[]
   | null = null;
 
-fetch("https://raw.githubusercontent.com/nornagon/cdda-data/main/builds.json")
+fetch("https://raw.githubusercontent.com/iLagSoUhax/ctlg-data/main/builds.json")
   .then((d) => d.json())
   .then((b) => {
     builds = b;
@@ -38,46 +38,46 @@ data.setVersion(version, locale);
 const tilesets = [
   {
     name: "AltiCa",
-    url: "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/{version}/gfx/Altica",
+    url: "https://raw.githubusercontent.com/Cataclysm-TLG/Cataclysm-TLG/{version}/gfx/Altica",
   },
   {
     name: "BrownLikeBears",
-    url: "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/{version}/gfx/BrownLikeBears",
+    url: "https://raw.githubusercontent.com/Cataclysm-TLG/Cataclysm-TLG/{version}/gfx/BrownLikeBears",
   },
   {
     name: "Chibi_Ultica",
-    url: "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/{version}/gfx/ChibiUltica",
+    url: "https://raw.githubusercontent.com/Cataclysm-TLG/Cataclysm-TLG/{version}/gfx/ChibiUltica",
   },
   {
     name: "Cuteclysm(Alpha)",
-    url: "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/{version}/gfx/Cuteclysm",
+    url: "https://raw.githubusercontent.com/Cataclysm-TLG/Cataclysm-TLG/{version}/gfx/Cuteclysm",
   },
   {
     name: "Hollow Moon",
-    url: "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/{version}/gfx/HollowMoon",
+    url: "https://raw.githubusercontent.com/Cataclysm-TLG/Cataclysm-TLG/{version}/gfx/HollowMoon",
   },
   {
     name: "MSXotto+",
-    url: "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/{version}/gfx/MshockXotto%2B",
+    url: "https://raw.githubusercontent.com/Cataclysm-TLG/Cataclysm-TLG/{version}/gfx/MshockXotto%2B",
   },
   {
     name: "NeoDays",
-    url: "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/{version}/gfx/NeoDaysTileset",
+    url: "https://raw.githubusercontent.com/Cataclysm-TLG/Cataclysm-TLG/{version}/gfx/NeoDaysTileset",
   },
   {
     name: "RetroDays",
-    url: "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/{version}/gfx/RetroDaysTileset",
+    url: "https://raw.githubusercontent.com/Cataclysm-TLG/Cataclysm-TLG/{version}/gfx/RetroDaysTileset",
   },
   {
     name: "UltiCa",
-    url: "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/{version}/gfx/UltimateCataclysm",
+    url: "https://raw.githubusercontent.com/Cataclysm-TLG/Cataclysm-TLG/{version}/gfx/UltimateCataclysm",
   },
 ];
 
 const normalizeTemplate = (t: string) => (t === "null" || !t ? "" : t);
 function loadTileset(): string {
   try {
-    const templ = localStorage.getItem("cdda-guide:tileset");
+    const templ = localStorage.getItem("ctlg-guide:tileset");
     if (!templ) return "";
     return normalizeTemplate(templ);
   } catch (e) {
@@ -86,7 +86,7 @@ function loadTileset(): string {
 }
 function saveTileset(url: string) {
   try {
-    if (!url) localStorage.removeItem("cdda-guide:tileset");
+    if (!url) localStorage.removeItem("ctlg-guide:tileset");
     else localStorage.setItem("cdda-guide:tileset", normalizeTemplate(url));
   } catch (e) {
     /* swallow security errors, which can happen when in incognito mode */
@@ -465,9 +465,9 @@ Anyway?`,
         slot0="link_github"
         slot1="link_nornagon"
         slot2="link_file_an_issue">
-        <a slot="0" href="https://github.com/nornagon/cdda-guide">GitHub</a>
+        <a slot="0" href="https://github.com/iLagSoUhax/ctlg-data">GitHub</a>
         <a slot="1" href="https://www.nornagon.net">nornagon</a>
-        <a slot="2" href="https://github.com/nornagon/cdda-guide/issues"
+        <a slot="2" href="https://github.com/iLagSoUhax/ctlg-data/issues"
           >{t("file an issue")}</a>
       </InterpolatedTranslation>
     </p>
