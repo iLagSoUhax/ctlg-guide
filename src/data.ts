@@ -1931,7 +1931,7 @@ const fetchJson = async (
   progress: (receivedBytes: number, totalBytes: number) => void
 ) => {
   return fetchJsonWithProgress(
-    `https://raw.githubusercontent.com/nornagon/cdda-data/main/data/${version}/all.json`,
+    `https://raw.githubusercontent.com/iLagSoUhax/ctlg-data/main/data/${version}/all.json`,
     progress
   );
 };
@@ -1942,7 +1942,7 @@ const fetchLocaleJson = async (
   progress: (receivedBytes: number, totalBytes: number) => void
 ) => {
   return fetchJsonWithProgress(
-    `https://raw.githubusercontent.com/nornagon/cdda-data/main/data/${version}/lang/${locale}.json`,
+    `https://raw.githubusercontent.com/iLagSoUhax/ctlg-data/main/data/${version}/lang/${locale}.json`,
     progress
   );
 };
