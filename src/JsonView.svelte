@@ -13,13 +13,13 @@ const _context = "View/Edit on GitHub";
 {#if obj.__filename}
   <a
     href={`https://github.com/Cataclysm-TLG/Cataclysm-TLG/blob/${
-      buildNumber ?? "master"
+      buildNumber ?? "main"
     }/${obj.__filename}`}
     target="_blank">{t("View", { _context })}</a>
   /
   <a
     href={`https://github.dev/Cataclysm-TLG/Cataclysm-TLG/blob/${
-      buildNumber ?? "master"
+      buildNumber ?? "main"
     }/${obj.__filename}`}
     target="_blank">{t("Edit on GitHub", { _context })}</a>
 {/if}
